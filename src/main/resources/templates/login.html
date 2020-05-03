@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymealeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Producto</title>
+</head>
+<body>
+<h1>Login</h1>
+	<h1>Ingrese un producto:</h1><br>
+	<form action="#" th:action="@{/procesarProduc}" th:object="${producto}" method="post">
+		<p>
+		Codigo: <input type="text" th:field="*{codigo}" id="codigo">
+		<span th:errors="*{codigo}" style="color: #FF0000">></span>
+		</p>
+		<p>
+		nombre: <input type="text" th:field="*{nombre}" id="nombre">
+		<span th:errors="*{nombre}" style="color: #FF0000">></span>
+		</p>
+		<p>
+		Marca: <input type="text" th:field="*{marca}" id="marca">
+		<span th:errors="*{marca}" style="color: #FF0000">></span>
+		</p>
+		<p>
+		Descripcion: <input type="text" th:field="*{codigo}" id="codigo">
+		<span th:errors="*{codigo}" style="color: #FF0000">></span>
+		</p>
+		<p>
+		Existencias <input type="text" th:field="*{existencia}" id="existencia">
+		<span th:errors="*{existencia}" style="color: #FF0000">></span>
+		</p>
+		<p>
+		Fecha de Ingreso: <input type="text" th:field="*{fechaIngreso}" id="fechaIngreso">
+		<span th:errors="*{fechaIngreso}" style="color: #FF0000">></span>
+		</p>
+		
+		<p> <input type="submit" value="Guardar Producto"> <input type="reset" value="Borrar" >
+		</p>
+	</form>
+
+</body>
+</html>
